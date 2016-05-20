@@ -21,7 +21,7 @@ public class App
         topologyBuilder.setBolt("SimpleBolt", new SimpleBolt(), 3).shuffleGrouping("SimpleSpout");
         Config config = new Config();
         config.setDebug(true);
-        
+
         
         if (System.getProperty("os.name").contains("Windows")) {
         	 // 这里是本地模式下运行的启动代码。
